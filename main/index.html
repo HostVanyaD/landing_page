@@ -16,16 +16,33 @@
 
 <body>
   <header>
-    <div class="nav-wrapper">
-      <img src="./images/logo.svg" alt="loopstudios-logo" class="header-logo">
-      <nav class="menu">
-        <a class="menu-item">About</a>
-        <a class="menu-item">Careers</a>
-        <a class="menu-item">Events</a>
-        <a class="menu-item">Products</a>
-        <a class="menu-item">Support</a>
-      </nav>
-    </div>
+    <nav class="nav-wrapper">
+      <a href="#">
+        <div class="header-logo-wrapper">
+          <img src="./images/logo.svg" alt="loopstudios-logo" class="header-logo">
+        </div>
+      </a>
+      <ul class="menu">
+        <li><a class="menu-item">About</a></li>
+        <li><a class="menu-item">Careers</a></li>
+        <li><a class="menu-item">Events</a></li>
+        <li><a class="menu-item">Products</a></li>
+        <li><a class="menu-item">Support</a></li>
+      </ul>
+      <!-- hamburger -->
+      <div class="mobile-menu">
+        <button class="hamburger">
+          <img src="./images/icon-hamburger.svg" alt="">
+        </button>
+
+        <button class="exit">
+          <img src="./images/icon-close.svg" alt="">
+        </button>
+      </div>
+      <!-- -----------------hamburger -->
+
+
+    </nav>
     <section class="moto">
       <div class="moto-content">Immersive experiences that deliver</div>
     </section>
@@ -47,34 +64,174 @@
     <section class="section2-wrapper">
       <div class="section2-nav">
         <h2 class="section2-title">Our creations</h2>
-        <button class="section2-btn">See all</button>
+        <button class="section2-top-btn">See all</button>
       </div>
-      <artcle class="section2-grid-items">
-        <div class="grid-item" style="background-image: url('./images/desktop/image-deep-earth.jpg');">
-          <h3 class="grid-item-title">Deep earth</h3>
-        </div>
-        <div class="grid-item" style="background-image: url('./images/desktop/image-night-arcade.jpg');">
-          <h3 class="grid-item-title">Night arcade</h3>
-        </div>
-        <div class="grid-item" style="background-image: url('./images/desktop/image-soccer-team.jpg');">
-          <h3 class="grid-item-title">Soccer team VR</h3>
-        </div>
-        <div class="grid-item" style="background-image: url('./images/desktop/image-grid.jpg');">
-          <h3 class="grid-item-title">The grid</h3>
-        </div>
-        <div class="grid-item" style="background-image: url('./images/desktop/image-from-above.jpg');">
-          <h3 class="grid-item-title">From up above VR</h3>
-        </div>
-        <div class="grid-item" style="background-image: url('./images/desktop/image-pocket-borealis.jpg');">
-          <h3 class="grid-item-title">Pocket borealis</h3>
-        </div>
-        <div class="grid-item" style="background-image: url('./images/desktop/image-curiosity.jpg');">
-          <h3 class="grid-item-title">The curiosity</h3>
-        </div>
-        <div class="grid-item" style="background-image: url('./images/desktop/image-fisheye.jpg');">
-          <h3 class="grid-item-title">Make it fisheye</h3>
-        </div>
+      <artcle class="section2-grid-items section2-desktop">
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/desktop/image-deep-earth.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>Deep earth</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/desktop/image-night-arcade.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>Night arcade</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/desktop/image-soccer-team.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>Soccer team VR</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/desktop/image-grid.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>The grid</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/desktop/image-from-above.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>From up above VR</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/desktop/image-pocket-borealis.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>Pocket borealis</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/desktop/image-curiosity.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>The curiosity</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/desktop/image-fisheye.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>Make it fisheye</h3>
+            </div>
+          </div>
+        </a>
       </artcle>
+
+      <artcle class="section2-mobile">
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/mobile/image-deep-earth.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>Deep earth</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/mobile/image-night-arcade.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>Night arcade</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/mobile/image-soccer-team.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>Soccer team VR</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/mobile/image-grid.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>The grid</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/mobile/image-from-above.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>From up above VR</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/mobile/image-pocket-borealis.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>Pocket borealis</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/mobile/image-curiosity.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>The curiosity</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <img src="./images/mobile/image-fisheye.jpg" alt="">
+            </div>
+            <div class="grid-item-title">
+              <h3>Make it fisheye</h3>
+            </div>
+          </div>
+        </a>
+      </artcle>
+      <button class="section2-bottom-btn">See all</button>
     </section>
   </main>
 

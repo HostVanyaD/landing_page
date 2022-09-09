@@ -28,11 +28,11 @@ body {
 }
 
 header {
+    color: var(--white);
     height: 650px;
     padding: 64px 150px;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("./images/desktop/image-hero.jpg") no-repeat center/cover;
-    color: var(--white);
 }
 
 h2 {
@@ -43,8 +43,8 @@ h2 {
 
 .nav-wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-areas: "h-logo none h-menu";
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "h-logo h-menu";
     font-family: Alata;
     align-items: center;
 }
@@ -56,7 +56,68 @@ h2 {
 .menu {
     grid-area: h-menu;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.menu-item {
+    margin-left: 15px;
+}
+
+.menu-item,
+.footer-link,
+.socials li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu-item:after,
+.footer-link:after {
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    width: 50%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -40%;
+    left: 25%;
+    background-color: var(--white);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.menu-item:hover,
+.footer-link:hover {
+    cursor: pointer;
+}
+
+.menu-item:hover:after,
+.footer-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.socials li:after {
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -40%;
+    left: 0;
+    background-color: var(--white);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.socials li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.mobile-menu {
+    display: none;
 }
 
 .moto {
@@ -74,10 +135,12 @@ h2 {
 }
 
 .main-content {
-    margin: 8rem 7rem;
+    margin: 8rem 4rem;
+    text-align: -webkit-center;
 }
 
 .section1-wrapper {
+    max-width: 1111px;
     display: grid;
 }
 
@@ -109,42 +172,86 @@ h2 {
     margin-top: 8rem;
 }
 
+.section2-mobile {
+    display: none;
+}
+
 .section2-nav {
+    max-width: 97%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.section2-btn {
+.section2-bottom-btn {
+    display: none;
+}
+
+.section2-top-btn,
+.section2-bottom-btn {
     padding: 13px 40px;
     font-size: 14px;
     letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: bolder;
     background-color: white;
+    border: 1px solid black;
+}
+
+.section2-top-btn:hover,
+.section2-bottom-btn:hover {
+    cursor: pointer;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 .section2-grid-items {
-    display: grid;
-    grid: 1fr 1fr / 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 3em;
+}
+
+.section2-grid-items a {
+    text-decoration: none;
 }
 
 .grid-item {
     height: 450px;
     width: 256px;
-    background-repeat: no-repeat;
     display: flex;
     align-items: flex-end;
-    justify-content: space-around;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.grid-item-img {
+    background-repeat: no-repeat;
+    transition: background 0.3s ease;
+}
+
+.section2-grid-items a:hover .grid-item-img,
+.section2-mobile a:hover .grid-item-img {
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.grid-item:hover h3 {
+    color: var(--black);
 }
 
 .grid-item-title {
+    position: absolute;
+    width: 200px;
     color: var(--white);
     text-transform: uppercase;
     font-size: 32px;
+    margin-left: 30px;
+}
+
+.grid-item-title h3 {
+    width: 96%;
     font-weight: lighter;
-    padding: 0 3.6rem 0 1.8rem;
 }
 
 footer {
@@ -177,4 +284,251 @@ footer {
 .footer-rights {
     justify-self: end;
     color: var(--darkGray);
+}
+
+@media screen and (max-width: 875px) {
+    header {
+        background-image: url('./images/mobile/image-hero.jpg');
+        background-size: cover;
+        padding: 40px 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .mobile-menu {
+        display: block;
+        justify-self: right;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        border: none;
+        background-color: transparent;
+    }
+
+    .exit {
+        display: none;
+    }
+
+    .moto {
+        width: 327px;
+        height: 196px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        scale: 1.5;
+    }
+
+    .moto-content {
+        margin: 1rem 1.5rem;
+        font-size: 40px;
+        line-height: 38px;
+    }
+
+    .main-content {
+        margin: 5rem 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        width: 90%;
+    }
+
+    .section1-wrapper {
+        display: block;
+        height: 527px;
+    }
+
+    .img-interactive {
+        width: 100%;
+    }
+
+    .section1-content {
+        width: 100%;
+        height: auto;
+        position: relative;
+        place-self: center;
+        padding: 0;
+    }
+
+    .section1-title {
+        font-size: 32px;
+        line-height: 32px;
+        margin: 2.5rem 0 1rem;
+    }
+
+    .section1-text {
+        margin: 0;
+    }
+
+    .section2-mobile {
+        display: none;
+    }
+
+    .section2-top-btn {
+        display: none;
+    }
+
+    .section2-bottom-btn {
+        display: block;
+        margin-top: 2em;
+    }
+}
+
+@media screen and (max-width:376px) {
+    body {
+        width: 100%;
+    }
+
+    .nav-wrapper {
+        height: 24px;
+    }
+
+    .header-logo-wrapper {
+        width: 144px;
+    }
+
+    .header-logo {
+        width: 100%;
+    }
+
+    .moto {
+        width: 327px;
+        height: 196px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .moto-content {
+        margin: 1rem 1.5rem;
+        font-size: 40px;
+        line-height: 38px;
+    }
+
+    .main-content {
+        margin: 5rem 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        width: 296px;
+    }
+
+    .section1-wrapper {
+        display: block;
+        height: 527px;
+    }
+
+    .img-interactive {
+        width: 100%;
+    }
+
+    .section1-content {
+        width: 279px;
+        height: 255px;
+        position: relative;
+        place-self: center;
+        padding: 0;
+    }
+
+    .section1-title {
+        font-size: 32px;
+        line-height: 32px;
+        margin: 2.5rem 0 1rem;
+    }
+
+    .section1-text {
+        margin: 0;
+    }
+
+    .section2-desktop {
+        display: none;
+    }
+
+    .section2-wrapper {
+        margin-top: 3rem;
+    }
+
+    .section2-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+    }
+
+    .section2-nav {
+        justify-content: center;
+    }
+
+    .section2-title {
+        margin-top: 0;
+        font-size: 32px;
+    }
+
+    .grid-item {
+        height: 120px;
+        width: 327px;
+        align-items: flex-start;
+    }
+
+    .grid-item-img {
+        width: 327px;
+        height: 120px;
+    }
+
+    .grid-item-img img {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+        width: 100%;
+    }
+
+    .grid-item-title {
+        font-size: 24px;
+        line-height: 24px;
+        margin-top: 1em;
+        width: 45%;
+    }
+
+    .section2-bottom-btn {
+        margin-top: 2em;
+    }
+
+    footer img {
+        grid-area: logo;
+    }
+
+    .socials {
+        grid-area: socials;
+        padding: 0;
+    }
+
+    .footer-rights {
+        grid-area: f-rights;
+        width: 272px;
+        text-align: center;
+    }
+
+    footer {
+        grid-template: 2fr 5fr 2fr 2fr/ 1fr;
+        grid-template-areas: 'logo''f-links''socials''f-rights';
+        gap: 0;
+        display: grid;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-links {
+        grid-area: f-links;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
 }
