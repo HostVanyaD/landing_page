@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <nav class="nav-wrapper">
       <a href="#">
         <div class="header-logo-wrapper">
@@ -23,25 +23,19 @@
         </div>
       </a>
       <ul class="menu">
-        <li><a class="menu-item">About</a></li>
-        <li><a class="menu-item">Careers</a></li>
-        <li><a class="menu-item">Events</a></li>
-        <li><a class="menu-item">Products</a></li>
-        <li><a class="menu-item">Support</a></li>
+        <li class="menu-item"><a href="#">About</a></li>
+        <li class="menu-item"><a href="#">Careers</a></li>
+        <li class="menu-item"><a href="#">Events</a></li>
+        <li class="menu-item"><a href="#">Products</a></li>
+        <li class="menu-item"><a href="#">Support</a></li>
       </ul>
       <!-- hamburger -->
-      <div class="mobile-menu">
-        <button class="hamburger">
-          <img src="./images/icon-hamburger.svg" alt="">
-        </button>
-
-        <button class="exit">
-          <img src="./images/icon-close.svg" alt="">
-        </button>
-      </div>
-      <!-- -----------------hamburger -->
-
-
+      <button class="mobile-menu hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <!-- hamburger -->
     </nav>
     <section class="moto">
       <div class="moto-content">Immersive experiences that deliver</div>
@@ -257,6 +251,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Val TM</a>.
     Coded by <a href="#">Vanya Dimova</a>.
   </div>
+  <script src="./script.js"></script>
 </body>
 
 </html>
